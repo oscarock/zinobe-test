@@ -1,0 +1,17 @@
+{
+	"name": "zinobe-test",
+	"description": "zinobe prueba backend",
+	"type": "project",
+	"require": {
+		"illuminate/database": "5.1.8",
+		"nezamy/route": "^1.1",
+		"twig/twig": "^1.35"
+	},
+	"autoload": {
+		"psr-4": { 
+			"Controllers\\": "app/controllers/",
+     	"Models\\": "app/models/",
+     	"Views\\": "app/views/"
+    }
+  }
+}

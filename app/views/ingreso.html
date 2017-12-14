@@ -1,0 +1,40 @@
+{% extends "head.html" %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7 offset-sm-3">
+				<br>
+				<br>
+				<br>
+				{% if estado_sesion == "" %}
+					<div class="alert alert-danger" role="alert">
+				  	<h4 class="alert-heading text-center">Error al Ingresar</h4>
+				  	<p class="text-center">Debe estar logeado para ver este contenido.</p>
+					</div>
+				{% else %}
+					<table class="table table-hover" id="buscar_resultados">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Nombre</th>
+								<th>Email</th>
+								<th>Pais</th>
+								<th>Fecha Creado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="5" class="text-center" id="text-resultados">Resultados de la consulta</td>
+							</tr>
+						</tbody>
+					</table>
+				{% endif %}
+			</div>
+		</div>		
+	</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="app/resources/js/buscar.js" type="text/javascript" charset="utf-8" async defer></script>
+{% endblock %}
